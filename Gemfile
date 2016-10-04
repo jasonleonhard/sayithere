@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+# gem 'rails', '>= 5.0.0.beta1'
 gem 'rails', '>= 5.0.0.beta2', '< 5.1'
 # Use Puma as the app server
 gem 'puma'
@@ -49,3 +50,5 @@ group :production do
   gem 'rails_12factor'
   gem "faye-websocket"
 end
+
+ruby "2.2.3" # not required
