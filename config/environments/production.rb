@@ -40,11 +40,13 @@ Rails.application.configure do
 
   # Action Cable endpoint configuration
   # config.action_cable.url = 'wss://example.com/cable'
-  # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
+      config.action_cable.url = 'wss://sayithere.herokuapp.com/cable'
+      config.action_cable.allowed_request_origins = [ 'http://sayithere.herokuapp.com', /http:\/\/sayithere.*/, 'https://sayithere.herokuapp.com', /https:\/\/sayithere.*/ ]
 
 # mkdir app/middleware # add this here:
   config.middleware.use ChatActionCable  
-  config.web_socket_server_url = "wss://pacific-chamber-3660.herokuapp.com/"  
+  # config.web_socket_server_url = "wss://pacific-chamber-3660.herokuapp.com/"
+      config.web_socket_server_url = "wss://sayithere.herokuapp.com/"
   # and then this # middleware/action_cable_chat.rb
     # class ChatActionCable  
     #   def initialize(app, options={})
